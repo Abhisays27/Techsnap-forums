@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forums</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/60bdd6c8a9.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.mincss">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.2/dist/quill.core.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.2/dist/quill.core.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.2/dist/quill.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.2/dist/quill.snow.css" rel="stylesheet">
+  
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js"></script>
+</head>
+
+<body>
+ 
+
+    </script>
+    <!-- Navbar -->
+    <div class="dropMenu">
+        <ul>
+            <li><a href="##">Catalog » </a></li>
+            <li><a href="##">Products » </a></li>
+            <li><a href="##">Career paths » </a></li>
+            <li><a href="##">Resources » </a></li>
+            <li><a href="##">For Business » </a></li>
+            <div class="mob1">
+                <a href="{% url 'update' user.profile.slug %}"><button class="btn" id='logout'>Edit</button></a>
+                <a href="{% url 'logout' %}"><button class="btn" id='logout'>LogOut</button></a>
+                <a href="{% url 'login' %}"><button class="btn" id="login">LogIn</button></a>
+            </div>
+            <a href="{% url 'register' %}"><button class="btn1" id="btn1">Register</button></a>
+        </ul>
+        <div class="Close">X</div>
+    </div>
+    
+    <!-- //---------------------------------- -->
+ 
+    <div class="header">
+        <div class="sub_header">
+            <div class="logo">
+                <img src="main/logo.png" alt="logo" />
+            </div>
+            <div class="menu_item">
+                <ul>
+                    <li onclick="catalog()">
+                        <a href="##" class="nav_item">Catalog
+                        </a>
+                        <span class="nav_item">⌵</span>
+                    </li>
+                    <li onclick="products()">
+                        <a href="##" class="nav_item">Products
+                        </a
+                        >
+                        <span class="nav_item">⌵</span>
+                    </li>
+                    <li onclick="careerPath()">
+                        <a href="##" class="nav_item">Career paths
+                        </a
+                        >
+    
+                    </li>
+                    <li onclick="resources()">
+                        <a href="##" class="nav_item">Resources
+                        </a
+                        >
+                        <span class="nav_item">⌵</span>
+                    </li>
+                    <li onclick="business()">
+                        <a href="##" class="nav_item">For Business
+                        </a
+                        >
+                        <span class="nav_item">⌵</span>
+                    </li>
+                </ul>
+                <div class="buttons">
+                    <a href="{% url 'login' %}"><button id="login">LogIn</button></a>
+                    <a href="{% url 'register' %}"><button id="register">Register</button></a>
+                </div>
+                <div class='avatar'>
+                    <img src="https://www.participate.nyc.gov/assets/decidim/default-avatar-43686fd5db4beed0141662a012321bbccd154ee1d9188b0d1f41e37b710af3cb.svg" alt="" srcset="">
+                </div>
+                <div class='profile_dropDown'>
+                    <a href="{% url 'dashboard' user.profile.slug %}" class="profile_dropDown_item">
+                        <span><img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/000000/external-dashboard-blogger-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"/></span>
+                        <p>View Dashboard</p>
+                    </a>
+                    <a href="{% url 'show_profile' user.profile.slug %}" class="profile_dropDown_item">
+                        <span><img src="https://img.icons8.com/ios/50/000000/user.png"/></span>
+                        <p>View Profile</p>
+                    </a>
+                    <a href="{% url 'update' user.profile.slug %}" class="profile_dropDown_item">
+                        <span><img src="https://img.icons8.com/ios/50/000000/user-not-found.png"/></span>
+                        <p>Edit</p>
+                    </a>
+                    <a href="{% url 'logout' %}" class="profile_dropDown_item">
+                        <span><img src="https://img.icons8.com/windows/32/000000/exit.png"/></span>
+                        <p>Logout</p>
+                    </a>
+                </div>
+            </div>
+            <div class="ham">
+                <img src="main/menu.png" alt="menu" />
+            </div>
+        </div>
+    </div>
+ 
+   <div class="heading-part "  id="sticky-header">
+    <div class="head-sticky" id="head-stick">
+        <div class="vote-section-heading">
+            Techsnap Intigrity Policy 
+          </div>
+
+        <div class="vote-section">
+         
+          <div class="vote-section-para-vote">
+            <div class="vote-sec-content" id="sticky-header">
+                <p> <i class="fa-sharp fa-solid fa-square" style="background-color:#324593 ;"></i>HQ Announcments <span>
+                        4 votes</span></p>
+                <div class="tags"> <a href="">#Tech</a> <a href="">#Snap</a> <a href="">#Dev</a> </div>
+            </div>
+            <div class="vote-count">
+                <p class="vote-count-num">4</p>
+                <button>Votes</button>
+            </div>
+        </div>
+        
+
+        </div>
+    </div>
+</div>
+    <div class="Content-section">
+       
+       
+        <div class="main-content">
+
+            <div class="comment-section">
+               
+                    <div class="profile-pic"><img src="./Assests//pf.jpeg" alt=""></div>
+             
+                <div class="comment-para">
+                    <div class="name-date">
+                        <h6>mariana_b <span>Official TechSnap Employee</span></h6>
+                        <p>Jan'24</p>
+                    </div>
+                    <div class="actual-comment">
+                        <p>Hi, everyone!</p>
+                        <p>Given the growing popularity of AI tools such as ChatGPT, we needed to address the elephant
+                            in the room.</p>
+                        <p>Some of you may have noticed the recent update to our <a
+                                href="https://discuss.codecademy.com/guidelines">Guidelines</a>, specifically under “<a
+                                href="https://discuss.codecademy.com/guidelines#integrity">Integrity</a>.” The update
+                            reads as follows:</p>
+                        <p><em>“We do not, under any circumstances, tolerate cheating or dishonesty.</em></p>
+                        <p><em>Please do not post answers or ask for them.</em></p>
+                        <p><em>Some people may help you by posting some code or showing you errors, but the goal must
+                                remain to help others to learn; cheating is not tolerated. If we see anybody cheating,
+                                we will delete the post and, depending on the circumstances, possibly ban your
+                                account.</em></p>
+                        <p><em>Having integrity also means not posting AI-generated answers (like from ChatGPT or other
+                                similar tools). We consider these unreliable answers and contributions to our Forums and
+                                will delete them.”</em></p>
+                        <p><strong>Why have we taken this stance regarding AI?</strong></p>
+                        <p>As a learning platform, Codecademy strives to push learners to arrive at solutions by
+                            thinking critically and trying their own solutions first. Unfortunately, relying on AI to
+                            generate code, can end up hurting more than it helps.</p>
+                        <p>We appreciate there is still a level of nuance and grey area as AI continues to develop, and
+                            we know we’ll likely have to adjust our AI policies as the technology advances. In the
+                            meantime, we thank you for understanding and abiding by our guidelines.</p>
+                        <p>Happy coding!</p>
+                    </div>
+
+               
+
+                    <!-- for desktop view -->
+
+                    <div class="likes-views-section" id="likesViewsSection">
+                        <div class="likes-view-content">
+
+                            <div class="create-reply">
+                                <p>created</p>
+                                <div class="create-reply-img">
+                                    <img src="./Assests/pf3.jpeg" alt="">
+                                    <p>Jan' 24</p>
+                                </div>
+                            </div>
+
+                            <div class="create-reply">
+                                <p>last reply</p>
+                                <div class="create-reply-img">
+                                    <img src="./Assests/pf.jpeg" alt="">
+                                    <p>Jan' 24</p>
+                                </div>
+                            </div>
+
+                            <div class="views-likes">
+                                <h3>3<h3>
+                                        <p>Replies</p>
+                            </div>
+
+                            <div class="views-likes">
+                                <h3>986<h3>
+                                        <p>Views</p>
+                            </div>
+
+                            <div class="views-likes">
+                                <h3>4<h3>
+                                        <p>Users</p>
+                            </div>
+
+                            <div class="views-likes">
+                                <h3>7<h3>
+                                        <p>Likes</p>
+                            </div>
+
+                            <div class="views-likes">
+                                <h3>2<h3>
+                                        <p>Links</p>
+                            </div>
+
+                            
+                        </div>
+
+
+
+                    </div>
+                  
+                   
+
+
+                    <!-- For mobile view -->
+                    <div class="likes-views-section-mobile">
+                        <div class="likes-view-content">
+                            <div class="row1">
+                                <div class="create-reply">
+                                    <p>created</p>
+                                    <div class="create-reply-img">
+                                        <img src="./Assests/pf3.jpeg" alt="">
+                                        <p>Jan' 24</p>
+                                    </div>
+                                </div>
+                                <div class="create-reply">
+                                    <p>last reply</p>
+                                    <div class="create-reply-img">
+                                        <img src="./Assests/pf.jpeg" alt="">
+                                        <p>Jan' 24</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mob-divider"></div>
+                            <div class="row2">
+                                <div class="views-likes">
+                                    <h3>3<h3>
+                                            <p>Replies</p>
+                                </div>
+
+                                <div class="views-likes">
+                                    <h3>986<h3>
+                                            <p>Views</p>
+                                </div>
+                                <div class="views-likes">
+                                    <h3>4<h3>
+                                            <p>Users</p>
+                                </div>
+                                <div class="views-likes">
+                                    <h3>7<h3>
+                                            <p>Likes</p>
+                                </div>
+                                <div class="views-likes">
+                                    <h3>2<h3>
+                                            <p>Links</p>
+                                </div>
+                            </div>
+                            <div class="mob-divider"></div>
+                         
+                        </div>
+                    </div>
+                  
+
+                </div>
+
+            </div>
+           
+        
+            <div class="divider"></div>
+
+            <div class="cmt-sect">
+                <div class="cmnt-num">
+                    <strong><p><i class="fa-regular fa-message"></i> 16 Comments</p></strong>
+                </div>
+
+            </div>
+            <div class="profile-editor">
+                <img src="./Assests/pf3.jpeg" alt="" class="user-img">
+                <!-- main comment editor 1-->
+            <div class="cmnt-editor">
+            <div id="editor-container">
+             
+            </div>
+            <div class="post-comment">
+                <strong><p>Post Comment</p></strong>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-cmnt-section" id="main-comment">
+        <img src="./Assests/pf2.jpeg" alt="">
+        <div class="user-cmnt-reply">
+         
+            <div class="user-comment">
+                <div class="upper-part">
+                    <div class="name-time">
+                        <h6 class="user-name">Arvind27</h6>
+                        <p class="posted-time">
+                            Posted 20 hours ago
+                            
+                            </p>
+                    </div>
+                    <div class="upvote-copy-buttons">
+                        <div class="upvote-container">
+                            <button class="upvote-button" id="upvoteButton" onclick="upvote()">
+                                <i class="fas fa-thumbs-up"></i> 
+                                <span id="upvoteCount">10</span> 
+                            </button>
+                        </div>
+                        <div class="copy-button" onclick="copyComment()">
+                            <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <div class="report" onclick="reportComment()">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                    </div>
+                </div>
+               
+                <p class="main-cmnt">hi @karnikakapoor, I am exploring different feature selection techniques recently and thank you so much for this practical guides :) I appreciate if you have some times to review my recent notebook on feature selection and offer some feedbacks. Thank you and have a great day </p>
+                
+            </div>
+            <!-- Comment reply-> reply editor 2 -->
+            <div class="user-reply">
+              <strong><p onclick="toggleCommentEditor()"> <i class="fa-solid fa-reply"></i>Reply</p></strong> 
+              <div class="cmnt-editor" id="cmnt-editor2" style="display: none;">
+                <div id="replyEditor-container">
+                 
+                </div>
+                <div class="post-cancel">
+                <div class="post-comment-reply">
+                    <strong><p>Post Comment</p></strong>
+    
+                </div>
+                <div class="cancel-comment">
+                    <strong><p onclick="cancelCommentEditing()">Cancel Editing</p></strong>
+    
+                </div>
+            </div>
+            </div>
+         <!-- commentreply -> reply area -->
+         <div class="main-cmnt-section" id="comment-reply" style="border-left: 1px solid rgb(177, 173, 173); padding-left: 10px;margin-bottom: 10px;margin-top: 10px;">
+            <img src="./Assests/pf3.jpeg" alt="">
+            <div class="user-cmnt-reply">
+             
+                <div class="user-comment">
+                    <div class="upper-part">
+                        <div class="name-time">
+                            <h6 class="user-name">Arvind27</h6>
+                            <p class="posted-time">
+                                Posted 20 hours ago
+                                
+                                </p>
+                        </div>
+                        <div class="upvote-copy-buttons">
+                            <div class="upvote-container">
+                                <button class="upvote-button" id="upvoteButton" onclick="upvote()">
+                                    <i class="fas fa-thumbs-up"></i> 
+                                    <span id="upvoteCount">10</span> 
+                                </button>
+                            </div>
+                            <div class="copy-button" onclick="copyComment()">
+                                <i class="fa-regular fa-copy"></i>
+                            </div>
+                            <div class="report" onclick="reportComment()">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <p class="main-cmnt">hi @karnikakapoor, I am exploring different feature selection techniques recently and thank you so much for this practical guides  I appreciate if you have some times to review my recent notebook on feature selection and offer some feedbacks. Thank you and have a great day </p>
+                    
+                </div>
+                <!-- commentreply -> reply->editor 3  -->
+                <div class="user-reply">
+                  <strong><p onclick="toggleCommentEditor2()"> <i class="fa-solid fa-reply"></i>Reply</p></strong> 
+                  <div class="cmnt-editor" id="cmnt-editor3" style="display: none;">
+                    <div id="replyEditor-container2">
+                     
+                    </div>
+                    <div class="post-cancel">
+                    <div class="post-comment-reply">
+                        <strong><p>Post Comment</p></strong>
+        
+                    </div>
+                    <div class="cancel-comment">
+                        <strong><p onclick="cancelCommentEditing2()">Cancel Editing</p></strong>
+        
+                    </div>
+                </div>
+                </div>
+             <!-- commentreply -> reply  -> reply area-->
+              
+         <div class="main-cmnt-section" id="comment-reply"  style="border-left: 1px solid rgb(177, 173, 173); padding-left: 10px;margin-bottom: 10px;margin-top: 10px;">
+            <img src="./Assests/pf2.jpeg" alt="">
+            <div class="user-cmnt-reply">
+             
+                <div class="user-comment">
+                    <div class="upper-part">
+                        <div class="name-time">
+                            <h6 class="user-name">Arvind27</h6>
+                            <p class="posted-time">
+                                Posted 20 hours ago
+                                
+                                </p>
+                        </div>
+                        <div class="upvote-copy-buttons">
+                            <div class="upvote-container">
+                                <button class="upvote-button" id="upvoteButton" onclick="upvote()">
+                                    <i class="fas fa-thumbs-up"></i> 
+                                    <span id="upvoteCount">5</span> 
+                                </button>
+                            </div>
+                            <div class="copy-button" onclick="copyComment()">
+                                <i class="fa-regular fa-copy"></i>
+                            </div>
+                            <div class="report" onclick="reportComment()">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <p class="main-cmnt">hi @karnikakapoor, I am exploring different feature selection techniques recently and thank you so much for this practical guides :) I appreciate if you have some times to review my recent notebook on feature selection and offer some feedbacks. Thank you and have a great day </p>
+                    
+                </div>
+                <!-- commentreply -> reply ->reply->editor4  -->
+                <div class="user-reply">
+                  <strong><p onclick="toggleCommentEditor3()"> <i class="fa-solid fa-reply"></i>Reply</p></strong> 
+                  <div class="cmnt-editor" id="cmnt-editor4" style="display: none;">
+                    <div id="replyEditor-container3">
+                     
+                    </div>
+                    <div class="post-cancel">
+                    <div class="post-comment-reply">
+                        <strong><p>Post Comment</p></strong>
+        
+                    </div>
+                    <div class="cancel-comment">
+                        <strong><p onclick="cancelCommentEditing3()">Cancel Editing</p></strong>
+        
+                    </div>
+                </div>
+                </div>
+             
+                
+                </div>
+               
+              
+            </div>
+            </div>
+                
+                </div>
+               
+              
+            </div>
+            </div>
+            
+            </div>
+           
+          
+        </div>
+        </div>
+    </div>
+   
+
+            <script>
+                var quill = new Quill('#editor-container', {
+    modules: {
+      toolbar: [
+        [{ header: [1, 2, false] }],
+        ['bold', 'italic', 'underline'],
+        ['image', 'code-block']
+        
+      ]
+    },
+    placeholder: 'Comment Here. Be Patient, Be friendly...',
+    theme: 'snow'  // or 'bubble'
+  });
+  var replyQuill = new Quill('#replyEditor-container', {
+    modules: {
+        toolbar: [
+            [{ header: [1, 2, false] }],
+            ['bold', 'italic', 'underline'],
+            ['image', 'code-block']
+        ]
+    },
+    placeholder: 'Comment Here. Be Patient, Be friendly...',
+    theme: 'snow'  // or 'bubble'
+});
+var replyQuill2 = new Quill('#replyEditor-container2', {
+    modules: {
+        toolbar: [
+            [{ header: [1, 2, false] }],
+            ['bold', 'italic', 'underline'],
+            ['image', 'code-block']
+        ]
+    },
+    placeholder: 'Comment Here. Be Patient, Be friendly...',
+    theme: 'snow'  // or 'bubble'
+});
+var replyQuill3 = new Quill('#replyEditor-container3', {
+    modules: {
+        toolbar: [
+            [{ header: [1, 2, false] }],
+            ['bold', 'italic', 'underline'],
+            ['image', 'code-block']
+        ]
+    },
+    placeholder: 'Comment Here. Be Patient, Be friendly...',
+    theme: 'snow'  // or 'bubble'
+});
+function toggleCommentEditor() {
+    var editor = document.getElementById("cmnt-editor2");
+    if (editor.style.display === "none" || editor.style.display === "") {
+        editor.style.display = "block";
+    } else {
+        editor.style.display = "none";
+    }
+}
+
+function cancelCommentEditing() {
+    var editor = document.getElementById("cmnt-editor2");
+    editor.style.display = "none";
+}
+function toggleCommentEditor2() {
+    var editor = document.getElementById("cmnt-editor3");
+    if (editor.style.display === "none" || editor.style.display === "") {
+        editor.style.display = "block";
+    } else {
+        editor.style.display = "none";
+    }
+}
+
+function cancelCommentEditing2() {
+    var editor = document.getElementById("cmnt-editor3");
+    editor.style.display = "none";
+}
+
+function toggleCommentEditor3() {
+    var editor = document.getElementById("cmnt-editor4");
+    if (editor.style.display === "none" || editor.style.display === "") {
+        editor.style.display = "block";
+    } else {
+        editor.style.display = "none";
+    }
+}
+
+function cancelCommentEditing3() {
+    var editor = document.getElementById("cmnt-editor4");
+    editor.style.display = "none";
+}
+
+
+
+</script>
+
+
+
+            
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="footer_MainBox">
+        <div class="Footer_page">
+            <footer class="Footer_conatiner">
+                <div class="Footer_header">
+                    <img src="main/logo.png"alt="Logo" />
+                    <br /><br />
+                    <p>We are here to endure your muddled stages of knowing the trends while pursuing UG-CSE.</br>we help you to know about trending jobs and required skills for achieving one particular designation</p>
+                    <br>
+                    <p>We will succour you in submitting your university projects as well as steer you with free tutorials, online courses, live courses and career paths</p>
+                </div>
+                <div class="Footer_columns_holder">
+                    <div class="Footer_columns">
+                        <h1>Company</h1>
+                        <a href="{% url 'aboutus' %}">About us</a>
+                        <a href="{% url 'learnerstories' %}">Learner stories</a>
+                        <a href="{% url 'boardmembers' %}">our people</a>
+                        <a href="{% url 'job_test:jobslist' %}">jobs</a>
+                    </div>
+                    <div class="Footer_columns">
+                        <h1>Resources</h1>
+                        <a href="##">Tutorials</a>
+                        <a href="{% url 'careerpath' %}">Career paths</a>
+                        <a href="##">Courses</a>
+                        <a href="##">Blogs</a>
+                    </div>
+                    <div class="Footer_columns">
+                        <h1>Support</h1>
+                        <a href="{% url 'contact' %}">Contact us</a>
+                        <a href="##">FAQ</a>
+                        <a href="{% url 'any_bugs' %}">Any ideas/Bugs</a>
+                        <a href="{% url 'invest' %}">Get Involved</a>
+                    </div>
+                    <div class="Footer_columns">
+                        <h1>Services</h1>
+                        <a href="##">Startup services</a>
+                        <a href="##">Design services</a>
+                        <a href="##">Mini Projects</a>
+                        <a href="##">Mock interviews</a>
+                    </div>
+                </div>
+                <div class="join_our desktop">
+                    <p>Join our newsletter</p>
+                    <form class="input_holder" method="POST" action="{% url 'nextpage' %}">
+                        {% csrf_token %}
+                        <input type="text" name="email"/>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </footer>
+            <div class="join_our responsive">
+                <p>Join our newsletter</p>
+                <form class="input_holder" method="POST" action="{% url 'nextpage' %}">
+                    {% csrf_token %}
+                    <input type="text" name="email"/>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="Privacy_holder">
+                <div class="Privacy_links">
+                    <a href="{% url 'privacy' %}">Privacy policy</a>
+                    <a href="{% url 'cookies' %}">Cookies Notice</a>
+                    <a href="{% url 'security' %}">Security</a>
+                    <a href="{% url 'terms' %}">Terms of use</a>
+                </div>
+                <div class="Social-media">
+                    <div class="image_conatiner">
+                        <a href="https://www.linkedin.com/company/74741373/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" id="link" /></a>
+    
+                        <a href="{% url 'contact' %}"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" id="link" /></a>
+    
+                        <a href="https://trello.com/b/SMDt9NMY/techsnap-upcoming-releases"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC-APsSZXqFUpTTg9qvGW6D5hERazjQfAMkM0Oz6b9sC3uIwU4-_fD8CatVhbAUG4hz3g&usqp=CAU" id="link" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyRight">
+            Made with 💗 in india © 2021 Techsnap Educations LLP. All Rights
+            Reserved.
+        </div>
+    </div>
+    </body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script>
+    new Splide( '.splide', {
+        type   : 'loop',
+        autoplay: true,
+        pagination : false,
+        arrows     : false,
+        perPage    : 2,
+        perMove    : 1,
+        focus  : 'center',
+        autoplay: true,
+        gap    : '1rem',
+        breakpoints : {
+            '600': {
+        perPage : 1,
+        gap    : '1rem'
+            }
+        },
+    } ).mount();
+    </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 900,
+                offset: 220,
+                easing: 'ease-in-out-quad',
+            });
+    
+            const header = document.querySelector('.header');
+            const navLink = document.querySelectorAll('.nav_item');
+            const ham = document.querySelector('.ham');
+    
+            window.addEventListener('scroll', () => {
+                const top = window.innerHeight * (15 / 100);
+                if (window.scrollY <= top) {
+                    header.style.background = 'rgb(26, 25, 29)';
+                    ham.style.background ="transparent";
+    
+                    header.style.height = '60px';
+                    navLink.forEach((i) => {
+                        i.style.color = '#fff';
+                    });
+                }
+                if (window.scrollY > top) {
+                    header.style.background = '#fff';
+                    ham.style.background ="#0a33ec";
+                    header.style.height = '60px';
+                    navLink.forEach((i) => {
+                        i.style.color = '#000';
+                    });
+                }
+            });
+    
+        </script>
+        <script>
+                //----------------------------
+    
+              const Close=document.querySelector(".Close");
+                const DropMenu =document.querySelector('.dropMenu')
+              ham.addEventListener('click',() => {
+                DropMenu.classList.add("MenuAnimation")
+                console.log('sdsd');
+    
+            })
+            Close.addEventListener('click',() => {
+                DropMenu.classList.remove('MenuAnimation')
+    
+            })
+        //------------------------------------
+         const Profile=document.querySelector(".avatar");
+         const Profile_dropDown=document.querySelector(".profile_dropDown");
+         Profile.addEventListener('click',()=>{
+             if(Profile_dropDown.style.opacity==='1'){
+                 Profile_dropDown.style.opacity='0'
+                 Profile_dropDown.style.pointerEvents='none'
+    
+             }
+             else{
+                 Profile_dropDown.style.opacity='1'
+                 Profile_dropDown.style.pointerEvents='all'
+    
+             }
+         })
+    document.addEventListener('click', function(event) {
+        var isClickInsideElement = Profile.contains(event.target);
+        if (!isClickInsideElement) {
+           Profile_dropDown.style.opacity='0'
+        }
+    });
+        //------------------------------------
+        </script>
+        <script src="nav.js"></script>
+   
+
+</html>
