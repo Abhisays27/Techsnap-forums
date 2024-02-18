@@ -337,8 +337,8 @@ display: none !important;
 .post-cancel {
     display: flex;
     justify-content: space-between;
-    margin-left: 2% !important;
-    margin-right: 13% !important;
+    margin-left: 1% !important;
+    margin-right: 6% !important;
 }
 
 } 
