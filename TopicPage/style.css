@@ -7,8 +7,38 @@ body{
  
     background-color: #ffffff;
 }
+@media only screen and (max-width: 764px) {
+	.topic-page{
+		margin-top: 12% !important;
+		margin-left: 3% !important;
+		margin-right: 3% !important;
+	}
+	
+	.heading-top{
+		flex-direction: column !important;
+	}
+	.heading-para p {
+		
+		margin-top: -9% !important;
+	}
+	.follow-newTopic {
+		margin-top: -3% !important;
+		margin-right: 3% !important;
+		display: flex;
+		gap: 20px;
+		 justify-content: flex-start!important;
+	}
+	.cards-forum {
+		margin-left: 3% !important;
+		margin-right: 3% !important;
+		margin-top: 5% !important;
+		margin-bottom: 5% !important;
+	}
+  }
+  
 .cards a{
 	text-decoration: none;
+	color: inherit !important; 
 }
 
 .topic-page{
@@ -27,9 +57,9 @@ body{
 	font-size: 36px;
 }
 .heading-para p{
-	color: #5F6368;
+	color: #363737;
 	font-size: 16px;
-	margin-top: -5% !important;
+	margin-top: -5% ;
 
 }
 .follow-newTopic{
@@ -124,7 +154,7 @@ font-size: 14px;
 
 
 .content p{
-    color: rgb(32, 33, 36);
+    color: #212122;
     font-size: 13px;
 }
 .main-card , .other-card{
@@ -144,6 +174,10 @@ font-size: 14px;
  
     padding: 3px;
 }
+.buttons-disc a.active {
+    background-color: #ccc;
+}
+
 
 .buttons-disc a {
 	cursor: pointer;
@@ -242,14 +276,15 @@ font-size: 14px;
     .views{
         display: none;
     }
+	
     .content h1{
-        color: #2641b0;
+		line-height: 16px;
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 600;
     }
     .content p{
-        color: #324593;
-        font-size: 9px;
+      
+        font-size: 11px;
     }
     .profile-pics img{
         width: 20px;
@@ -264,7 +299,7 @@ font-size: 14px;
 .replies-views{
     display: flex;
     justify-content: space-between;
-    gap: 5px;
+    gap: 9px;
     margin-right: 1%;
 
 }
@@ -272,7 +307,7 @@ font-size: 14px;
  
     gap: 29px;
     font-size: 9px;
-    color: #324593;
+ 
     margin-right: 2%;
     
 }
@@ -280,12 +315,7 @@ font-size: 14px;
     max-width: 180px;
     margin-left: 1%;
 }
-.cards-forum{
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 18%;
-    margin-bottom: 5%;
-}
+
 }
 
 /* Navbar and footer */

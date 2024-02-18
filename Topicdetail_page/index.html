@@ -125,8 +125,8 @@
          
           <div class="vote-section-para-vote">
             <div class="vote-sec-content" id="sticky-header">
-                <p> <i class="fa-sharp fa-solid fa-square" style="background-color:#324593 ;"></i>HQ Announcments <span>
-                        4 votes</span></p>
+                <p> <i class="fa-sharp fa-solid fa-square" style="background-color:#324593 ;"></i>Techsnap Announcments
+                       </p>
                 <div class="tags"> <a href="">#Tech</a> <a href="">#Snap</a> <a href="">#Dev</a> </div>
             </div>
             <div class="vote-count">
@@ -150,34 +150,12 @@
              
                 <div class="comment-para">
                     <div class="name-date">
-                        <h6>mariana_b <span>Official TechSnap Employee</span></h6>
+                        <h6>mariana_b </h6>
                         <p>Jan'24</p>
                     </div>
                     <div class="actual-comment">
-                        <p>Hi, everyone!</p>
-                        <p>Given the growing popularity of AI tools such as ChatGPT, we needed to address the elephant
-                            in the room.</p>
-                        <p>Some of you may have noticed the recent update to our <a
-                                href="https://discuss.codecademy.com/guidelines">Guidelines</a>, specifically under “<a
-                                href="https://discuss.codecademy.com/guidelines#integrity">Integrity</a>.” The update
-                            reads as follows:</p>
-                        <p><em>“We do not, under any circumstances, tolerate cheating or dishonesty.</em></p>
-                        <p><em>Please do not post answers or ask for them.</em></p>
-                        <p><em>Some people may help you by posting some code or showing you errors, but the goal must
-                                remain to help others to learn; cheating is not tolerated. If we see anybody cheating,
-                                we will delete the post and, depending on the circumstances, possibly ban your
-                                account.</em></p>
-                        <p><em>Having integrity also means not posting AI-generated answers (like from ChatGPT or other
-                                similar tools). We consider these unreliable answers and contributions to our Forums and
-                                will delete them.”</em></p>
-                        <p><strong>Why have we taken this stance regarding AI?</strong></p>
-                        <p>As a learning platform, Codecademy strives to push learners to arrive at solutions by
-                            thinking critically and trying their own solutions first. Unfortunately, relying on AI to
-                            generate code, can end up hurting more than it helps.</p>
-                        <p>We appreciate there is still a level of nuance and grey area as AI continues to develop, and
-                            we know we’ll likely have to adjust our AI policies as the technology advances. In the
-                            meantime, we thank you for understanding and abiding by our guidelines.</p>
-                        <p>Happy coding!</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed fuga provident culpa magni soluta inventore repellat officia aperiam. Ullam quam ut debitis sapiente tenetur cumque corporis illum eligendi fugiat corrupti soluta tempore voluptatem beatae iste vero, expedita eos est facilis deleniti architecto minima repellat laborum earum! Nulla consectetur voluptatum facere, totam consequuntur ad ipsam veniam inventore aperiam. Delectus officiis reprehenderit labore quisquam eaque ducimus amet id sequi eum incidunt ad, aperiam fuga in quos, possimus natus error, laborum magnam excepturi? Illo iusto voluptatibus ratione vel esse aliquam quis fuga blanditiis nemo a dolorum cumque autem ea, porro dignissimos quae non dicta dolor architecto nisi. Vitae quisquam deserunt accusamus quis minus. Expedita a mollitia laudantium culpa eum obcaecati delectus ducimus excepturi quisquam autem. Nostrum molestiae alias quibusdam consectetur ipsa architecto repellat delectus soluta. Quidem cupiditate sint soluta. Laborum, itaque. Consequuntur, modi odio? Illum natus omnis itaque, sapiente dolor fugit non accusamus a quisquam eligendi distinctio aspernatur id! Reprehenderit illo nesciunt commodi maxime sit, a libero voluptate voluptatum! Eligendi ipsum fugiat libero, necessitatibus nemo dolorem nam quo velit sint nihil deserunt, quos enim quod, debitis natus eum cupiditate fugit sunt! Sunt dignissimos, eos delectus voluptatem quisquam ab dolore animi reiciendis nostrum sint.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque architecto necessitatibus fugiat quia possimus dolores, magni facilis omnis porro sequi asperiores enim nesciunt sit doloribus aut dignissimos reiciendis expedita alias quae perspiciatis? Molestias at cum voluptatem vero, veniam cumque quis voluptate sit, dolorum ullam, expedita adipisci deserunt numquam ducimus ut!</p>
                     </div>
 
                
@@ -451,7 +429,7 @@
                     
                 </div>
                 <!-- commentreply -> reply ->reply->editor4  -->
-                <div class="user-reply">
+                <!-- <div class="user-reply">
                   <strong><p onclick="toggleCommentEditor3()"> <i class="fa-solid fa-reply"></i>Reply</p></strong> 
                   <div class="cmnt-editor" id="cmnt-editor4" style="display: none;">
                     <div id="replyEditor-container3">
@@ -470,7 +448,7 @@
                 </div>
              
                 
-                </div>
+                </div> -->
                
               
             </div>
@@ -525,17 +503,17 @@ var replyQuill2 = new Quill('#replyEditor-container2', {
     placeholder: 'Comment Here. Be Patient, Be friendly...',
     theme: 'snow'  // or 'bubble'
 });
-var replyQuill3 = new Quill('#replyEditor-container3', {
-    modules: {
-        toolbar: [
-            [{ header: [1, 2, false] }],
-            ['bold', 'italic', 'underline'],
-            ['image', 'code-block']
-        ]
-    },
-    placeholder: 'Comment Here. Be Patient, Be friendly...',
-    theme: 'snow'  // or 'bubble'
-});
+// var replyQuill3 = new Quill('#replyEditor-container3', {
+//     modules: {
+//         toolbar: [
+//             [{ header: [1, 2, false] }],
+//             ['bold', 'italic', 'underline'],
+//             ['image', 'code-block']
+//         ]
+//     },
+//     placeholder: 'Comment Here. Be Patient, Be friendly...',
+//     theme: 'snow'  // or 'bubble'
+// });
 function toggleCommentEditor() {
     var editor = document.getElementById("cmnt-editor2");
     if (editor.style.display === "none" || editor.style.display === "") {
@@ -572,10 +550,10 @@ function toggleCommentEditor3() {
     }
 }
 
-function cancelCommentEditing3() {
-    var editor = document.getElementById("cmnt-editor4");
-    editor.style.display = "none";
-}
+// function cancelCommentEditing3() {
+//     var editor = document.getElementById("cmnt-editor4");
+//     editor.style.display = "none";
+// }
 
 
 

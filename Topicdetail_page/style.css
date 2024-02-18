@@ -18,7 +18,8 @@ body{
 }
 
 .heading-part {
-	
+	background: white;
+
 	position: sticky;
 	z-index: 100000;
 	top: 0;
@@ -52,10 +53,7 @@ body{
 }
 
 
-.vote-section-heading {
-    padding: 10px;
-   
-}
+
 .vote-count{
 	margin-bottom: 2%;
 }
@@ -152,7 +150,7 @@ Mobile */
     margin-top: 10%;
  }
     .Content-section{
-        margin-top: 24% !important;
+        margin-top: 15% !important;
         margin-left: 0px !important ;
         margin-right: 0px !important;
         
@@ -179,6 +177,7 @@ Mobile */
     .vote-section-heading{
         width: 83% !important;
         margin-left: 1%;
+		padding-top: 3% !important;
         font-size: 23px !important;
 
     
@@ -260,7 +259,7 @@ display: none !important;
 }
 .likes-views-section-mobile{
  
-    background-color: #F5F6FC;
+    background-color: #fdfdfd;
   display: block !important;
     margin-left: 0% !important;
     margin-right: 2% !important;
@@ -297,23 +296,66 @@ display: none !important;
     margin-left: 2%;
   
 }
+.head-sticky {
+    margin-top: 2%;
+    margin-left: 5% !important;
+    margin-right: 5%!important;
+    margin-bottom: 12% !important;
+    font-family: "Inter", sans-serif !important;
+}
 
-
+.user-img {
+    height: 35px !important;
+    width: 35px !important;
+    border-radius: 50%;
+}
+.main-cmnt-section img {
+    width: 30px !important;
+    height: 30px !important;
     
+    margin-top: 8% !important;
+}  
+.upvote-button {
+    
+    
+
+   
+    padding: 2px 5px !important;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px !important;
+    cursor: pointer;
+    transition: background-color 0.3s;
+} 
+.post-comment p {
+   
+    color: white !important;
+     width: 30% !important; 
+   
+}
+.post-cancel {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2% !important;
+    margin-right: 13% !important;
+}
 
 } 
 
 
 .vote-section-heading{
-    font-size: 25px;
+    font-size: 35px;
     z-index: 1000;
-
-
+width: 90% !important;
+display: flex !important;
+align-items: start !important;
+justify-content: start !important;
 top: 60px;
 margin-bottom: 1%;
     font-weight: 600;
     font-family: "Inter", sans-serif !important;
-    padding-left: 5px;
+   padding-top: 1% ;
     padding-bottom: 5px;
   
 
@@ -332,7 +374,7 @@ margin-bottom: 1%;
     justify-content: center;
     background-color: #fff;
 margin-top: -2%;
-    border: 1px solid #10162f;
+    border: 1px solid #6c6c6e;
     height: 40px;
     width: 68px;
     color: #10162F;
@@ -347,7 +389,9 @@ margin-top: -2%;
     justify-content: center;
     color: #F2FBFF;
     font-size: 13px;
-    background-color: #3A10E5;
+	font: 600 !important;
+	border: none;
+    background: radial-gradient(circle at 10% 20%, rgb(75, 108, 183) 0%, rgb(55, 82, 141) 90%);
     width: 68px;
     height: 27px;
     margin-top: -20%;
@@ -374,9 +418,9 @@ width: auto;
     font-size: 13px;
     font-weight: 500;
     text-decoration: none;
-    color: #0077cc;
+    color: #09CE5A;
     padding: 4px 8px;
-    border: 1px solid #0077cc;
+    border: 1px solid #09CE5A;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
@@ -388,7 +432,7 @@ width: auto;
 
 
 .vote-sec-content  p{
-    color: #324593;
+    color: #5f6368;
     width: 100%;
     font-size: 12px;
     margin-top: -3%;
@@ -479,12 +523,12 @@ margin-top: 2%;
    
 }
 .name-date  p{
-    color: #324593;
+    color: #09CE5A;
     font-family: "Inter", sans-serif !important;
 
 }
 .name-date h6{
-    color: #324593;
+    color: #5f6368;
     font-size: 14px;
     width: 100%;
 }
@@ -505,7 +549,7 @@ margin-top: 2%;
     line-height: 35px;
 }
 .likes-views-section{
-  background-color: #F5F6FC;
+  background-color: #fdfdfd;
   display: flex;
   justify-content: space-between;
   margin-left: 3%;
@@ -886,6 +930,8 @@ cursor: pointer;
 @media (max-width: 600px) {
 	.dropMenu {
 		display: flex;
+		z-index: 999999;
+
 	}
 	.Ham {
 		display: block;

@@ -115,6 +115,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".buttons-disc a");
+
+    // Set initial background color for "All" button
+    document.getElementById("showAll").classList.add("active");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            // Remove the 'active' class from all buttons
+            buttons.forEach(btn => btn.classList.remove("active"));
+            // Add the 'active' class to the clicked button
+            button.classList.add("active");
+        });
+    });
+});
 
 
 

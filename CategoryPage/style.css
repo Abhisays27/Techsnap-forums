@@ -37,6 +37,7 @@ header{
     font-size: 36px;
     font-weight: 700;
     line-height: 44px;
+	
 }
 .leftside p{
   
@@ -251,9 +252,17 @@ column-gap: 6px;
     .main-disc-body{
         margin-left: 2% !important;
         margin-right: 2% !important;
+		margin-top: 15% !important;
         font-family: "Inter", sans-serif;
     
     }
+	.views{
+		display: none;
+	}
+	
+	.voting-button{
+		margin-top: 25% !important;
+	}
     .leftside h1{
        
         font-size: 30px;
